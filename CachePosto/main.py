@@ -1,5 +1,6 @@
 import sqlite3
 import os,sys
+import random
 
 # CADASTRO DE USUARIO AO BANCO DE DADOS
 
@@ -35,7 +36,7 @@ class Usuario():
 
         logg = (f'Banco: {self.conn} CONECTADO')
 
-        print(logg)
+        
         
     def creatTablet(self):
         self.c.execute(""" 
@@ -48,11 +49,11 @@ class Usuario():
 
         print('TABELA CONECTADO usuarios')
 
-    def insetUser(self,cpf,celular,codigo,ponto=0):
+    def insetUser(self,cpf,celular,ponto=0):
 
         self.cpf = cpf
         self.celular = celular
-        self.codigo = codigo
+        self.codigo = random.randint(1000,9999)
         self.ponto = ponto
 
         self.c.execute("INSERT INTO usuarios (cpf,celular,codigo,ponto)VALUES(?,?,?,?)", (self.cpf,self.celular,self.codigo,self.ponto))
@@ -73,10 +74,15 @@ class Usuario():
                 print(i)
 
     def queryUser(self):
-
+        lista = []
         consulta = self.c.execute("SELECT * FROM usuarios")
         for i in consulta:
             print("\n" ,i)
+            lista.append(i)
+
+        return lista
+
+            
 
     def queryCpforCode(self,cpf_codigo):
 
@@ -124,12 +130,12 @@ class Ponto(Usuario):
         self.conn.commit()
         print('Ponto Add Com Sucesso!')
 
-"""
 
 if __name__ == "__main__":
     Usuario().creatTablet()
-     
-"""
+
+
+
 
 
 
