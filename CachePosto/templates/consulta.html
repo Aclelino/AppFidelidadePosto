@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petrobras Fidelidade</title>
+    <title>Fidelidade</title>
 </head>
 <body>
 
     <form action="/">
         <button type="submit">Inicio</button>
-     </form>
- 
-   {%for lista in dados%}
-    _________________________________<br>
-        Codigo: {{lista[3]}}<br>
-        Cpf: {{lista[1]}}<br>
-        Ponto: {{lista[4]}}<br>
-   
+    </form>
+
+    {%for i in valor%}
+        Cpf: {{ i[1] }}<br>
+        Ponto: {{ i[4]}}
     {%endfor%}
-
-
+        
 </body>
 </html>

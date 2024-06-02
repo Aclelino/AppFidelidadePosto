@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petrobras Fidelidade</title>
+
+    <link rel="stylesheet" href="/templates/style.css">
+
+    <title>Fidelidade</title>
 </head>
 <body>
-    <form action="/salvar" method="post">
-        <h1>Cadastro de Usuário</h1>
-        <p> {{ dados }}  </p> 
-            <input type="text" id="cpf" name="cpf" placeholder="CPF 000.000.000-00"><br><br>
-            <input type="text" id="phone" name="phone" placeholder="CELULAR (00) 000000000"><br><br>
 
-            <button type="submit" id="buttoSave">Cadastrar</button>
+    <form action="/cadastro">
+        <button type="submit">Cadastro</button>
     </form>
+
+    <form action="/lista">
+        <button type="submit">Cliente</button>
+     </form>
+    
+     <form action="/ponto">
+        <button type="submit">Pontos</button>
+     </form>
+
+     
+   
+     <form action="/query">
+        <button type="submit">Consulta</button>
+     </form>
+
     
 </body>
 </html>

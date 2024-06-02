@@ -77,7 +77,7 @@ class Usuario():
         lista = []
         consulta = self.c.execute("SELECT * FROM usuarios")
         for i in consulta:
-            print("\n" ,i)
+            
             lista.append(i)
 
         return lista
@@ -85,14 +85,19 @@ class Usuario():
             
 
     def queryCpforCode(self,cpf_codigo):
-
+        lista = []
         consul = self.c.execute('SELECT * FROM usuarios')
         for i in consul:            
             cpf = (i[1])
             codigo = (i[3])
 
             if cpf_codigo == cpf or cpf_codigo == codigo:
-                print(i)
+                
+                lista.append(i)
+
+                return lista
+
+                
                     
 # SISTEMA DE PONTOS
             
@@ -133,11 +138,7 @@ class Ponto(Usuario):
 
 if __name__ == "__main__":
     Usuario().creatTablet()
-
-
-
-
-
+    Usuario().queryCpforCode(3030)
 
 
 # ADD USUARIO
