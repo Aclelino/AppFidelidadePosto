@@ -6,7 +6,7 @@ toda vez que for abastecer você avisa o codigo que foi gerado quando foi realiz
 você consegue realizar a consulta da mesma forma com o cpf ou o seu codigo 
 
 ## Instalação 
-
-git clone
-
+'''
+git clone https://github.com/Aclelino/AppFidelidadePosto.git
+'''
 ## 
