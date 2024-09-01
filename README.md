@@ -8,8 +8,6 @@ O primeiro passo é fazer o cadastro do cliente. Assim que realizar o cadastro, 
 * Adicionar ponto
 * Consultar cliente
 
-  
-Consegue realizar a consulta com cpf ou codigo 
 
 ## Requisito
 
